@@ -20,6 +20,5 @@ python manage.py runserver
 ## Hello World
 
 go to http://127.0.0.1:8000/helloworld -> Hello World will be returned
-
 go to http://127.0.0.1:8000/create -> A test record will be created and a list of all test records will display as well as the current timestamp
 
