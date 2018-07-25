@@ -17,6 +17,6 @@ python manage.py sync_cassandra
 python manage.py runserver
 ```
 
-## Check Test Output
+## Hello World
 
-go to http://127.0.0.1:8000/test to check test output
+open browser and go to http://127.0.0.1:8000/helloworld
