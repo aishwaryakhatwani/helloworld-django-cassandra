@@ -56,7 +56,7 @@ ROOT_URLCONF = 'helloworld_django_cassandra.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'example/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
