@@ -11,7 +11,7 @@ from .models import ExampleModel
 
 # Create your views here.
 def helloworld(request):
-    return HttpResponse('Hello World')
+    return render(request, 'index.html')
 
 def create(request):
     ExampleModel.create(example_type=0, description="example1", created_at=datetime.datetime.now())
