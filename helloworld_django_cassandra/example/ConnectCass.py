@@ -6,7 +6,7 @@ class Connect:
     __slot__ = 'cluster', 'session'
 
     def __init__(self):
-        self.cluster = Cluster(['192.168.202.214'],protocol_version=3)
+        self.cluster = Cluster(protocol_version=3)
         self.session = self.cluster.connect()
         self.session.execute('use killrweather')
 
