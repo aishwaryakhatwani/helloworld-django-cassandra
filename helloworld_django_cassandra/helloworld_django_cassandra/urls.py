@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^query1', views.getQuery1),
     url(r'^create', views.create),
-    path('index', views.helloworld)
+    path('index', views.query1)
 ]
