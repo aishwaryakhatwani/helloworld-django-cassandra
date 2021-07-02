@@ -14,9 +14,9 @@ from cassandra.cluster import Cluster
 obj = Connect()
 
 # Create your views here.
-def helloworld(request):
+def getQuery1(request):
     # session.execute("Use killrweather")
-    obj.cass()
+    obj.query1()
     return render(request, 'index.html')
 
 def create(request):
@@ -24,3 +24,6 @@ def create(request):
     output = str(list(ExampleModel.objects.all()))
     output += 'current time = %s' % time.time()
     return HttpResponse(output)
+
+def getQuery2(request):
+    obj.query2()
