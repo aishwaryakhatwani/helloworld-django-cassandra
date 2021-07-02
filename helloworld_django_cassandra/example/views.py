@@ -3,11 +3,15 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from cassandra.cluster import Cluster
 
 import time
 import datetime
 from .models import ExampleModel
+from ConnectCass import Connect
 
+obj = Connect()
+obj.cass()
 
 # Create your views here.
 def helloworld(request):
