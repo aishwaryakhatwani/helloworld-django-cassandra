@@ -8,13 +8,20 @@ from cassandra.cluster import Cluster
 import time
 import datetime
 from .models import ExampleModel
-from .ConnectCass import Connect
+# from .ConnectCass import Connect
+from cassandra.cluster import Cluster
 
-obj = Connect()
-obj.cass()
+# obj = Connect()
+# obj.cass()
 
 # Create your views here.
 def helloworld(request):
+    cluster = Cluster(protocol_version=3)
+    session = cluster.connect()
+    session.execute("Use killrweather")
+    results = session.execute("select * from raw_weather_data limit 3")
+    user = results.one()
+    print(user)
     return render(request, 'index.html')
 
 def create(request):
