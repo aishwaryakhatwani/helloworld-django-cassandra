@@ -6,7 +6,7 @@ class Connect:
     __slot__ = 'cluster', 'session'
 
     def __init__(self):
-        self.cluster = Cluster(['198.168.207.255'], port=9042)
+        self.cluster = Cluster(['127.0.0.0'], port=7000)
         self.session = self.cluster.connect()
 
     def cass(self):
