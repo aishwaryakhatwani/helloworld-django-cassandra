@@ -25,5 +25,5 @@ def create(request):
     output += 'current time = %s' % time.time()
     return HttpResponse(output)
 
-def getQuery2(request):
-    obj.query2()
+def getQuery1(request):
+    obj.query1()

@@ -11,7 +11,7 @@ class Connect:
         self.session.execute('use killrweather')
 
     def query1(self):
-        statement = SimpleStatement('select * from raw_weather_data limit 3;')
+        statement = SimpleStatement('select max(temperature), max(dewpoint), max(pressure), max(wind_speed) from raw_weather_data where year=2020;')
         for user_row in self.session.execute(statement):
             print(user_row)
 
