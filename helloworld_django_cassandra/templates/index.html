@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <h1>helloworld</h1>
+
+<form action="/action_page.php">
+<h3>Query 1 : Maximum air temperature, due point, pressure, and wind details for the year selected by the user.</h3>
+  <label for="year">Enter year : </label>
+  <input type="text" id="year" name="year"><br><br>
+  
+  <button type="button" onclick="alert('Fetching records')">Submit Query</button>
+  
+<h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
+  <label for="Month">Enter Month :</label>
+  <input type="text" id="month" name="month"><br><br>
+  
+  <label for="year_2">Enter Year :</label>
+  <input type="text" id="year_2" name="year_2"><br><br>
+  
+  <label for="airBase">Enter Airbase :</label>
+  <input type="text" id="airBase" name="airBase"><br><br>
+
+<button type="button" onclick="alert('Fetching records')">Submit Query</button>
+
+</form>
 </body>
 </html>
+
