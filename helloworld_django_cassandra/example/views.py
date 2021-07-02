@@ -14,7 +14,7 @@ from cassandra.cluster import Cluster
 obj = Connect()
 
 # Create your views here.
-def getQuery1(request):
+def displayQueries(request):
     # session.execute("Use killrweather")
     obj.query1()
     return render(request, 'index.html')
