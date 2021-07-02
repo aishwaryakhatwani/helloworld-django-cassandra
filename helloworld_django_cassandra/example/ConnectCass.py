@@ -6,11 +6,16 @@ class Connect:
     __slot__ = 'cluster', 'session'
 
     def __init__(self):
-        self.cluster = Cluster(protocol_version=3)
+        self.cluster = Cluster(['192.168.202.214'],protocol_version=3)
         self.session = self.cluster.connect()
-
-    def cass(self):
         self.session.execute('use killrweather')
+
+    def query1(self):
+        statement = SimpleStatement('select * from raw_weather_data limit 3;')
+        for user_row in self.session.execute(statement):
+            print(user_row)
+
+    def query2(self):
         statement = SimpleStatement('select * from raw_weather_data limit 3;')
         for user_row in self.session.execute(statement):
             print(user_row)
