@@ -8,7 +8,7 @@ from cassandra.cluster import Cluster
 import time
 import datetime
 from .models import ExampleModel
-from ConnectCass import Connect
+from .ConnectCass import Connect
 
 obj = Connect()
 obj.cass()
