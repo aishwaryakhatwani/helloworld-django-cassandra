@@ -4,6 +4,8 @@
 
 <form id="form1" method=POST>
 <h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
+{% csrf_token %}
+
   <label for="year">Enter year : </label>
   <input type="text" id="year" name="year" ><br><br>
   
@@ -25,6 +27,8 @@
 </form>
 <form id="form2" method=POST>
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
+{% csrf_token %}
+
   <label for="Month">Enter Month :</label>
   <input type="text" id="month" name="month"><br><br>
   
