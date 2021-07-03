@@ -23,7 +23,7 @@ class Connect:
         return data
 
     def query2(self, year, month, airbase):
-        query = "select max(temperature) as temp from raw_weather_data where year = "+ year+ " and month = " + month + " and wsid = '" + airbase + "' and day between (1 and 31) ALLOW FILTERING;"
+        query = "select max(temperature) as temp from raw_weather_data where year = "+ year+ " and month = " + month + " and wsid = '" + airbase + "' and day between 1 AND 31 ALLOW FILTERING;"
         print(query)
         statement = SimpleStatement(query)
         data = self.session.execute(statement)
