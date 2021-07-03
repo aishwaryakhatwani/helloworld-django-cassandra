@@ -7,11 +7,11 @@
 </head>
 <body>
     <h1>Query 2 Results</h1>
-    {% set i = 0 %}
+    {% with i = 0 %}
     <div>
         {% for temp in val %}
             <p>{{i}}\t:\t{{ temp }}</p>
-            {% set i=i+1 %}
+            {{ i|add:"1" }}
         {% endfor %}
     </div>
 
