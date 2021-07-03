@@ -27,7 +27,7 @@
 </form>
 <form id="form2" action ={% url 'getQuery2' %} method=GET>
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
-{% csrf_token %}
+<!-- {% csrf_token %} -->
 
   <label for="Month">Enter Month :</label>
   <input type="text" id="month" name="month"><br><br>
@@ -38,7 +38,19 @@
   <label for="airBase">Enter Weather Station :</label>
   <input type="text" id="airBase" name="airBase"><br><br>
 
-<button type="button">Submit Query</button>
+  <button onclick="send_value()"> Submit </button>
+  <script type= "text/javascript">
+    function send_value(){
+   
+                $.ajax({
+                url: 'getQuery2',
+                method : 'GET',
+                data: {year: $('#year2').val(),
+                      month: $('#month').val(),
+                      airbase: $('#airBase').val()},
+                 });
+   }
+   </script>
 </form>
 
 </body>
