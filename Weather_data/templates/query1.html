@@ -9,7 +9,9 @@
     <h1>Query 1 Results</h1>
 
     <div>
-        <h3>Max temperature (in Celsius), max dewpoint (in Cesius), max pressure (in Pascal) and max wind speed (in meter/sec) reported in the year {{ year }}</h3>
+        <h3>Max temperature (in Celsius), max dewpoint (in Cesius), <br>
+            max pressure (in Pascal) and max wind speed(in meter/sec) <br>
+            reported in the year {{ year }}</h3>
         {% for key, val in data.items %}
         
             <p>{{key}} &nbsp;&nbsp;:&nbsp;&nbsp;{{val}}</p>
