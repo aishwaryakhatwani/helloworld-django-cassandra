@@ -27,5 +27,5 @@ class Connect:
         print(query)
         statement = SimpleStatement(query)
         data = self.session.execute(statement)
-        print(data)
+        print(data.temp)
         return data
