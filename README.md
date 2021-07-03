@@ -29,6 +29,17 @@ pip install cassandra-driver
 pip install django-cassandra-engine
 ```
 
+## Clone this repo
+```
+git clone url
+```
+
+## To Run application
+```
+cd helloworld-django-cassandra
+cd helloworld_django_cassandra
+```
+
 ## Init Cassandra Keyspace and Table
 ```
 python manage.py sync_cassandra
