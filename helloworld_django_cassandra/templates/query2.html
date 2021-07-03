@@ -8,7 +8,7 @@
 <body>
     <h1>Query 2 Results</h1>
     <div>
-        <h3>Temperatures reported by Weather station: {{ wsid }} in {{ month }}/{{ year }}
+        <h3>Temperatures (in Celsius) reported by Weather station: {{ wsid }} in {{ month }}/{{ year }}
         </h3>
         {% for temp in data %}
             <p>Day&nbsp;{{ forloop.counter }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ temp.temp }}</p>
