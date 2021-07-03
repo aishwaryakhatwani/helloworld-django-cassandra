@@ -10,6 +10,7 @@ import datetime
 from .models import ExampleModel
 from .ConnectCass import Connect
 from cassandra.cluster import Cluster
+from django.views.decorators.csrf import csrf_exempt
 
 obj = Connect()
 
