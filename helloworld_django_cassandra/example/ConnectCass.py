@@ -26,6 +26,6 @@ class Connect:
         query = "select temperature as temp from raw_weather_data where year = "+ year+ " and month = " + month + " and wsid = '" + airbase + "' ALLOW FILTERING;"
         print(query)
         statement = SimpleStatement(query)
-        data = self.session.execute(statement).current_rows
-        print(data.current_rows)
+        data = self.session.execute(statement).all()
+        print(data)
         return data
