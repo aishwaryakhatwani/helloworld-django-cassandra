@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form id="form1" method=GET>
+<form id="form1" action="{% url 'getQuery1' %" method=GET>
 <h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
 {% csrf_token %}
 
