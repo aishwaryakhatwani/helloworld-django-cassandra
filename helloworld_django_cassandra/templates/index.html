@@ -2,10 +2,10 @@
 <html>
 <body>
 
-<form action="{% url 'example:getQuery1' %}" method="POST">
+<form action="{% url 'getQuery1' %}" method="GET">
 <h3>Query 1 : Maximum air temperature, due point, pressure, and wind details for the year selected by the user.</h3>
   <label for="year">Enter year : </label>
-  <input type="text" id="year" name="year"><br><br>
+  <input type="text" id="year" name="year" valuw= "{{ year }}"><br><br>
   
   <button type="button">Submit Query</button>
   
