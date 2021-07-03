@@ -11,7 +11,7 @@
         <h3>Temperatures reported by Weather station: {{ wsid }} in {{ month }}/{{ year }}
         </h3>
         {% for temp in data %}
-            <p>{{ forloop.counter }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ temp.temp }}</p>
+            <p>Day&nbsp;{{ forloop.counter }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ temp.temp }}</p>
         {% endfor %}
     </div>
 
