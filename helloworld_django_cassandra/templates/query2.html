@@ -7,10 +7,11 @@
 </head>
 <body>
     <h1>Query 2 Results</h1>
-
+    {{ i =0 }}
     <div>
-        {% for temp in data %}
-            <p>{{ temp }}</p>
+        {% for temp in val %}
+            <p>{{i}}\t:\t{{ temp }}</p>
+            {{ i ++ }}
         {% endfor %}
     </div>
 
