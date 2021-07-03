@@ -9,13 +9,10 @@
     <h1>Query 1 Results</h1>
 
     <div>
-        <h2>Max temperature, max dewpoint, max pressure and max wind speed reported in the year {{ year }}</h2>
+        <h3>Max temperature, max dewpoint, max pressure and max wind speed reported in the year {{ year }}</h3>
         {% for key, val in data.items %}
-        <tr>
-            <td>
-                {{key}}   :   {{val}}
-            </td>
-        </tr>
+        
+            <p>{{key}} &nbsp;&nbsp;:&nbsp;&nbsp;{{val}}</p>
         {% endfor %}
     </div>
 
