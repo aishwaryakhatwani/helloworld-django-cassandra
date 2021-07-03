@@ -24,11 +24,13 @@ def displayQueries(request):
 def getQuery1(request):
     year = request.GET['year']
     data = obj.query1(year)
-    
     context = {}
-    context['data'] = data
-    context['year'] = year
-    return render(request, 'query1.html', context)
+    if data:
+        context['data'] = data
+        context['year'] = year
+        return render(request, 'query1.html', context)
+    else:
+        return render(request, 'error.html', context)
 
 @csrf_exempt
 def getQuery2(request):
@@ -36,10 +38,12 @@ def getQuery2(request):
     month = request.GET['month']
     airbase = request.GET['airBase']
     data = obj.query2(year, month, airbase)
-    
     context = {}
-    context['data'] = data
-    context['wsid'] = airbase
-    context['year'] = year
-    context['month'] = month
-    return render(request, 'query2.html', context)
+    if data:
+        context['data'] = data
+        context['wsid'] = airbase
+        context['year'] = year
+        context['month'] = month
+        return render(request, 'query2.html', context)
+    else:
+        return render(request, 'error.html', context)
