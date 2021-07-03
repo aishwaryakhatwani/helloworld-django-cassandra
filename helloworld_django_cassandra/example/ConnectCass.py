@@ -23,6 +23,8 @@ class Connect:
         return data
 
     def query2(self, year, month, airbase):
-        statement = SimpleStatement('select temperature as temp from raw_weather_data where year = '+ year+' and month = ' + month + ' and wsid = "' + airbase + '" ALLOW FILTERING;')
+        query = "select temperature as temp from raw_weather_data where year = "+ year+ " and month = " + month + " and wsid = '" + airbase + "' ALLOW FILTERING;"
+        print(query)
+        statement = SimpleStatement(query)
         data = self.session.execute(statement)[0]
         return data
