@@ -9,10 +9,8 @@
     <h1>Query 2 Results</h1>
 
     <div>
-        {% for key, val in data.items %}
-            {% for temp in val %}
-                <p>{{ temp }}</p>
-            {% endfor %}
+        {% for temp in data %}
+            <p>{{ temp }}</p>
         {% endfor %}
     </div>
 
