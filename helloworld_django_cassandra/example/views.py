@@ -28,7 +28,7 @@ def create(request):
 
 @csrf_exempt
 def getQuery1(request):
-    year = request.GET['quantity']
+    year = request.GET['year']
     data = obj.query1(year)
     
     context = {}
