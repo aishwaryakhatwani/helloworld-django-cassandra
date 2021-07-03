@@ -29,4 +29,4 @@ def getQuery1(request):
     data = obj.query1()
     context = {}
     context['data'] = data
-    return render(request, 'query1', context)
+    return render(request, 'query1.html', context)
