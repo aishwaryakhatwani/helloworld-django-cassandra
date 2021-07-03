@@ -21,7 +21,7 @@ from example import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^queries', views.displayQueries),
+    url(r'^queries', views.getQuery1),
     url(r'^create', views.create),
     url(r'^query1', views.getQuery1)
     # path('index', views.getQuery1)
