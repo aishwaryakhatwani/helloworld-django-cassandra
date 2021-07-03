@@ -15,10 +15,10 @@ class Connect:
         data = {}
         
         for air_base_data in self.session.execute(statement):
-            data['temp'] = air_base_data['temp']
-            data['dewpoint'] = air_base_data['dew']
-            data['pressure'] = air_base_data['pressure']
-            data['wind'] = air_base_data['wind']
+            data['temp'] = air_base_data[0]
+            data['dewpoint'] = air_base_data[1]
+            data['pressure'] = air_base_data[2]
+            data['wind'] = air_base_data[3]
         
         return data
 
