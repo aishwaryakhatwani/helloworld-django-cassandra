@@ -16,7 +16,7 @@ obj = Connect()
 # Create your views here.
 def displayQueries(request):
     # session.execute("Use killrweather")
-    obj.query1()
+    # obj.query1()
     return render(request, 'index.html')
 
 def create(request):
