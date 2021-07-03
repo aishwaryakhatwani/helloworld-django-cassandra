@@ -26,4 +26,7 @@ def create(request):
     return HttpResponse(output)
 
 def getQuery1(request):
-    obj.query1()
+    data = obj.query1()
+    context = {}
+    context['data'] = data
+    return render(request, 'query1', context)

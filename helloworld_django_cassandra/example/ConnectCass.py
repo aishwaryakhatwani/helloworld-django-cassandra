@@ -11,9 +11,16 @@ class Connect:
         self.session.execute('use killrweather')
 
     def query1(self):
-        statement = SimpleStatement('select max(temperature), max(dewpoint), max(pressure), max(wind_speed) from raw_weather_data where year=2014 ALLOW FILTERING;')
-        for user_row in self.session.execute(statement):
-            print(user_row)
+        statement = SimpleStatement('select max(temperature) as temp, max(dewpoint) as dew, max(pressure) as pressure, max(wind_speed) as wind from raw_weather_data where year=2014 ALLOW FILTERING;')
+        data = {}
+        
+        for air_base_data in self.session.execute(statement):
+            data['temp'] = air_base_data['temp']
+            data['dewpoint'] = air_base_data['dew']
+            data['pressure'] = air_base_data['pressure']
+            data['wind'] = air_base_data['wind']
+        
+        return data
 
     def query2(self):
         statement = SimpleStatement('select * from raw_weather_data limit 3;')
