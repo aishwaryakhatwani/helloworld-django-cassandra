@@ -26,7 +26,7 @@ def create(request):
     return HttpResponse(output)
 
 def getQuery1(request):
-    year = request.POST['quantity']
+    year = request.GET['quantity']
     data = obj.query1(year)
     
     context = {}

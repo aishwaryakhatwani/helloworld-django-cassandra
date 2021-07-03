@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form id="form1" method=POST>
+<form id="form1" method=GET>
 <h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
 {% csrf_token %}
 
@@ -17,7 +17,7 @@
     
                  $.ajax({
                  url: '/query1/',
-                 method : 'POST',
+                 method : 'GET',
                  data: {quantity: $('#year').val()},
                   });
     }
@@ -25,7 +25,7 @@
     
   </button>
 </form>
-<form id="form2" method=POST>
+<form id="form2" method=GET>
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
 {% csrf_token %}
 
