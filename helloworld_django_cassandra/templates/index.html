@@ -2,12 +2,12 @@
 <html>
 <body>
 
-<form  method="GET">
+<form action="{% url 'query1' %}" method="POST">
 <h3>Query 1 : Maximum air temperature, due point, pressure, and wind details for the year selected by the user.</h3>
   <label for="year">Enter year : </label>
   <input type="text" id="year" name="year"><br><br>
   
-  <button type="button" href="{% url 'getQuery1'%">Submit Query</button>
+  <button type="button">Submit Query</button>
   
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
   <label for="Month">Enter Month :</label>
