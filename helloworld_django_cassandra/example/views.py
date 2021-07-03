@@ -25,6 +25,7 @@ def create(request):
     output += 'current time = %s' % time.time()
     return HttpResponse(output)
 
+@csrf_exempt
 def getQuery1(request):
     year = request.GET['quantity']
     data = obj.query1(year)
