@@ -2,15 +2,15 @@
 <html>
 <body>
 
-<form>
+<form id="form1" method=POST>
 <h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
   <label for="year">Enter year : </label>
   <input type="text" id="year" name="year" ><br><br>
   
 
-    <button type="button" onclick='send_value()'> Submit </button>
+    <button onclick='send_value()'> Submit </button>
 
-    <script type="text/javascript">
+    <script type= "text/javascript">
      function send_value(){
     
                  $.ajax({
@@ -22,7 +22,8 @@
     </script>
     
   </button>
-  
+</form>
+<form id="form2" method=POST>
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
   <label for="Month">Enter Month :</label>
   <input type="text" id="month" name="month"><br><br>
@@ -34,8 +35,8 @@
   <input type="text" id="airBase" name="airBase"><br><br>
 
 <button type="button" onclick="alert('Fetching records')">Submit Query</button>
-
 </form>
+
 </body>
 </html>
 
