@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<form id="form1" action="{% url 'getQuery1' %" method=GET>
+<form id="form1" method=GET>
 <h3>Query 1 : Maximum air temperature, due point, pressure and wind details for the year selected by the user.</h3>
 <!-- {% csrf_token %} -->
 
@@ -10,9 +10,9 @@
   <input type="text" id="year" name="year" ><br><br>
   
 
-    <button type="submit"> Submit </button>
+    <button onclick="send_value()"> Submit </button>
 
-    <!-- <script type= "text/javascript">
+    <script type= "text/javascript">
      function send_value(){
     
                  $.ajax({
@@ -21,7 +21,7 @@
                  data: {quantity: $('#year').val()},
                   });
     }
-    </script> -->
+    </script>
     
   </button>
 </form>
