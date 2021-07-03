@@ -25,7 +25,7 @@
     
   </button>
 </form>
-<form id="form2" method=GET>
+<form id="form2" action ={% url 'getQuery2' %} method=GET>
 <h3>Query 2 : Air temperature for each day for a given month, year and airbase selected by the user.</h3>
 {% csrf_token %}
 
@@ -35,10 +35,10 @@
   <label for="year_2">Enter Year :</label>
   <input type="text" id="year_2" name="year_2"><br><br>
   
-  <label for="airBase">Enter Airbase :</label>
+  <label for="airBase">Enter Weather Station :</label>
   <input type="text" id="airBase" name="airBase"><br><br>
 
-<button type="button" onclick="alert('Fetching records')">Submit Query</button>
+<button type="button">Submit Query</button>
 </form>
 
 </body>

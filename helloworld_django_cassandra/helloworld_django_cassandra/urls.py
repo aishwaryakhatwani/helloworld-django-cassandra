@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^queries', views.displayQueries),
     url(r'^create', views.create),
-    path('query1', views.getQuery1, name='getQuery1')
+    path('query1Results', views.getQuery1, name='getQuery1'),
+    path('query2Results', views.getQuery2, name='getQuery2')
     # path('index', views.getQuery1)
 ]

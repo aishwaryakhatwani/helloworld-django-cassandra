@@ -20,12 +20,6 @@ def displayQueries(request):
     # obj.query1()
     return render(request, 'index.html')
 
-def create(request):
-    ExampleModel.create(example_type=0, description="example1", created_at=datetime.datetime.now())
-    output = str(list(ExampleModel.objects.all()))
-    output += 'current time = %s' % time.time()
-    return HttpResponse(output)
-
 @csrf_exempt
 def getQuery1(request):
     year = request.GET['year']
@@ -34,3 +28,14 @@ def getQuery1(request):
     context = {}
     context['data'] = data
     return render(request, 'query1.html', context)
+
+@csrf_exempt
+def getQuery2(request):
+    year = request.GET['year_2']
+    month = request.GET['month']
+    airbase = request.GET['airBase']
+    data = obj.query2(year, month, airbase)
+    
+    context = {}
+    context['data'] = data
+    return render(request, 'query2.html', context)
