@@ -10,8 +10,8 @@ class Connect:
         self.session = self.cluster.connect()
         self.session.execute('use killrweather')
 
-    def query1(self):
-        statement = SimpleStatement('select max(temperature) as temp, max(dewpoint) as dew, max(pressure) as pressure, max(wind_speed) as wind from raw_weather_data where year=2014 ALLOW FILTERING;')
+    def query1(self, year):
+        statement = SimpleStatement('select max(temperature) as temp, max(dewpoint) as dew, max(pressure) as pressure, max(wind_speed) as wind from raw_weather_data where year=' + year + ' ALLOW FILTERING;')
         data = {}
         
         for air_base_data in self.session.execute(statement):

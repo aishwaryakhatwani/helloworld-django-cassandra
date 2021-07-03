@@ -27,7 +27,7 @@ def create(request):
 
 def getQuery1(request):
     year = request.GET.get('year')
-    data = obj.query1()
+    data = obj.query1(year)
     
     context = {}
     context['data'] = data

@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^queries', views.displayQueries),
     url(r'^create', views.create),
-    url(r'^query1', views.getQuery1, name='getQuery1')
+    url(r'^query1/(?P<year>\d+)/$', views.getQuery1, name='getQuery1')
     # path('index', views.getQuery1)
 ]
