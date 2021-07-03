@@ -25,7 +25,8 @@ def create(request):
     output += 'current time = %s' % time.time()
     return HttpResponse(output)
 
-def getQuery1(request, year=2014):
+def getQuery1(request):
+    year = request.POST['quantity']
     data = obj.query1(year)
     
     context = {}
