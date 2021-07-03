@@ -7,14 +7,11 @@
 </head>
 <body>
     <h1>Query 2 Results</h1>
-    {% with i=0 %}
     <div>
         {% for temp in data %}
-            <p>{{ i }}\t:\t{{ temp.temp }}</p>
-            {{ i|add:"1" }}
+            <p>{{ forloop.counter }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ temp.temp }}</p>
         {% endfor %}
     </div>
-    {% endwith %}
 
 </body>
 </html>
