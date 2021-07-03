@@ -27,6 +27,7 @@ def getQuery1(request):
     
     context = {}
     context['data'] = data
+    context['year'] = year
     return render(request, 'query1.html', context)
 
 @csrf_exempt
@@ -38,4 +39,7 @@ def getQuery2(request):
     
     context = {}
     context['data'] = data
+    context['wsid'] = airbase
+    context['year'] = year
+    context['month'] = month
     return render(request, 'query2.html', context)

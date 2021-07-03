@@ -8,6 +8,8 @@
 <body>
     <h1>Query 2 Results</h1>
     <div>
+        <h2>Temperatures reported by Weather station: {{ wsid }} in {{ month }}/{{ year }}
+        </h2>
         {% for temp in data %}
             <p>{{ forloop.counter }}&nbsp;&nbsp;:&nbsp;&nbsp;{{ temp.temp }}</p>
         {% endfor %}
