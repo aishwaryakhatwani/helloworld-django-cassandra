@@ -1,5 +1,7 @@
 from cassandra.cluster import Cluster
 from cassandra.query import SimpleStatement
+import matplotlib.pyplot as plt
+import pandas as pd
 
 class Connect:
 
@@ -33,6 +35,29 @@ class Connect:
         try:
             statement = SimpleStatement(query)
             data = self.session.execute(statement)
+        except:
+            return []
+        return data
+
+    def query3(self, year, station): 
+        query = "Select month, AVG(pressure) from raw_weather_data where year = " + year + " and wsid = " + station
+        print(query)
+        data = []
+        statement = SimpleStatement(query)
+        try:
+            for pressure in self.session.execute(statement):
+                temp = {}
+                temp['month'] = pressure[0]
+                temp['pressure'] = pressure[1]
+                data.append(temp)
+            
+            df = pd.DataFrame(data)
+
+            plt.figure(1)
+            fig = plt.figure()
+            plt.plot(df['month'], df['pressure'], 'k-')
+            fig.savefig('graph.png')
+            
         except:
             return []
         return data
