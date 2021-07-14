@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Query 3 Results</h1>
+    <div>
+        <h3>Average Pressure per month reported by Weather station: {{ wsid }} in {{ year }}
+        </h3>
+        {% for temp in data %}
+            {% for key, value in temp.items %}
+            <p>{{key}} &nbsp;&nbsp;:&nbsp;&nbsp;{{val}}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+</body>
+</html>

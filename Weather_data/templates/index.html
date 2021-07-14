@@ -45,14 +45,37 @@
                 $.ajax({
                 url: 'getQuery2',
                 method : 'GET',
-                data: {year: $('#year2').val(),
+                data: {year: $('#year_2').val(),
                       month: $('#month').val(),
                       airbase: $('#airBase').val()},
                  });
    }
    </script>
 </form>
-
+<form id="form3" action ={% url 'getQuery3' %} method=GET>
+  <h3>Query 2 : Average pressure per month for the given year and weather station.</h3>
+  <!-- {% csrf_token %} -->
+    
+    <label for="year_3">Enter Year :</label>
+    <input type="text" id="year_3" name="year_2" placeholder="YYYY (Up to 2014)"><br><br>
+    
+    <label for="station">Enter Weather Station ID:</label>
+    <input type="text" id="weatherStation" name="airBase" placeholder="XXXXXX:XXXXX"><br><br>
+  
+    <button onclick="send_value()"> Submit </button>
+    <script type= "text/javascript">
+      function send_value(){
+     
+                  $.ajax({
+                  url: 'getQuery3',
+                  method : 'GET',
+                  data: {year: $('#year_3').val(),
+                        month: $('#month').val(),
+                        airbase: $('#station').val()},
+                   });
+     }
+     </script>
+  </form>
 </body>
 </html>
 
