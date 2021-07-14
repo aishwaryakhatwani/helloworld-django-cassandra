@@ -53,7 +53,7 @@
    </script>
 </form>
 <form id="form3" action ={% url 'getQuery3' %} method=GET>
-  <h3>Query 2 : Average pressure per month for the given year and weather station.</h3>
+  <h3>Query 3 : Average pressure per month for the given year and weather station.</h3>
   <!-- {% csrf_token %} -->
     
     <label for="year_3">Enter Year :</label>
@@ -70,7 +70,6 @@
                   url: 'getQuery3',
                   method : 'GET',
                   data: {year: $('#year_3').val(),
-                        month: $('#month').val(),
                         airbase: $('#station').val()},
                    });
      }
