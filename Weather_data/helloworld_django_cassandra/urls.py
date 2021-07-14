@@ -24,5 +24,5 @@ urlpatterns = [
     url(r'^queries', views.displayQueries),
     path('query1Results', views.getQuery1, name='getQuery1'),
     path('query2Results', views.getQuery2, name='getQuery2'),
-    path('query3Results', views.getQuery2, name='getQuery3')
+    path('query3Results', views.getQuery3, name='getQuery3')
 ]
