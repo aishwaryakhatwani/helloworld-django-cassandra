@@ -52,12 +52,12 @@ class Connect:
                 data.append(temp)
             
             df = pd.DataFrame(data)
-
-            plt.figure(1)
+            df[['month', 'pressure']] = df[['month', 'pressure']].apply(pd.to_numeric, errors='coerce')
+            plt.figure()
             fig = plt.figure()
             plt.plot(df['month'], df['pressure'], 'k-')
             fig.savefig('graph.png')
-            
+
         except:
             return []
         return data
