@@ -39,8 +39,9 @@ class Connect:
             return []
         return data
 
+
     def query3(self, year, station): 
-        query = "Select month, AVG(pressure) from raw_weather_data where year = " + year + " and wsid = " + station
+        query = "Select month, AVG(pressure) from raw_weather_data where year = " + year + " and wsid = '" + station + "' group by month ALLOW FILTERING;"
         print(query)
         data = []
         statement = SimpleStatement(query)
