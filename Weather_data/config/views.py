@@ -47,3 +47,15 @@ def getQuery2(request):
         return render(request, 'query2.html', context)
     else:
         return render(request, 'error.html', context)
+
+@csrf_exempt
+def getQuery3(request):
+    year = request.GET['year_3']
+    station = request.GET['station']
+    data = obj.query3(year, station)
+    context = {}
+    if data:
+        context['data'] = data
+        return render(request, 'query3.html', context)
+    else:
+        return render(request, 'error.html', context)
