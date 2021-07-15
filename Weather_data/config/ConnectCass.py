@@ -51,7 +51,7 @@ class Connect:
                 temp['month'] = pressure[0]
                 temp['pressure'] = pressure[1]
                 data.append(temp)
-            
+            print(data)
             # df = pd.DataFrame(data)
             # df[['month', 'pressure']] = df[['month', 'pressure']].apply(pd.to_numeric, errors='coerce')
             # plt.figure()
@@ -60,5 +60,6 @@ class Connect:
             # fig.savefig('../Media/graph.png')
 
         except:
+            print("no data")
             return []
         return data
