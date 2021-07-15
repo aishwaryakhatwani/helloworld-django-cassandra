@@ -57,7 +57,7 @@ class Connect:
             plt.figure()
             fig = plt.figure()
             plt.plot(df['month'], df['pressure'], 'k-')
-            fig.savefig('graph.png')
+            fig.savefig('/Media/graph.png')
 
         except:
             return []
