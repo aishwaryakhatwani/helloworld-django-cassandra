@@ -9,7 +9,7 @@ Function views
 Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  url(r'^$', Home.as_view(), name='home')
-Including another URLconf
+Includi ng another URLconf
     1. Import the incude() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
@@ -25,4 +25,4 @@ urlpatterns = [
     path('query1Results', views.getQuery1, name='getQuery1'),
     path('query2Results', views.getQuery2, name='getQuery2'),
     path('query3Results', views.getQuery3, name='getQuery3')
-]
+]+ static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
