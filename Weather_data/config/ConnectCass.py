@@ -52,14 +52,14 @@ class Connect:
                 temp['pressure'] = pressure[1]
                 data.append(temp)
             print(data)
-            # df = pd.DataFrame(data)
-            # df[['month', 'pressure']] = df[['month', 'pressure']].apply(pd.to_numeric, errors='coerce')
-            # plt.figure()
-            # fig = plt.figure()
-            # plt.plot(df['month'], df['pressure'], 'k-')
-            # fig.savefig('../Media/graph.png')
 
-        except:
-            print("no data")
+            fig = plt.figure()
+
+            plt.plot([temp['month'] for temp in data],[temp['pressure'] for temp in data],marker)
+
+            fig.savefig('../Media/graph.png')
+
+        except Exception as e:
+            print(e)
             return []
         return data
