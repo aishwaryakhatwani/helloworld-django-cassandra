@@ -57,7 +57,7 @@ class Connect:
 
             plt.plot([temp['month'] for temp in data],[temp['pressure'] for temp in data])
 
-            fig.savefig('../Media/graph.png')
+            fig.savefig('graph.png')
 
         except Exception as e:
             print(e)
