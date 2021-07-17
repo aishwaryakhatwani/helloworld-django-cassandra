@@ -37,7 +37,7 @@ git clone url
 ## To Run application
 ```
 cd helloworld-django-cassandra
-cd helloworld_django_cassandra
+cd Weather_data
 ```
 
 ## Init Cassandra Keyspace and Table
