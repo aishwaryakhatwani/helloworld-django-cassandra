@@ -28,6 +28,11 @@ pip install cassandra-driver
 ```
 pip install django-cassandra-engine
 ```
+## Install other python librabries
+```
+pip install matplotlib
+pip install pandas
+```
 
 ## Clone this repo
 ```

@@ -55,7 +55,7 @@ class Connect:
 
             fig = plt.figure()
 
-            plt.plot([temp['month'] for temp in data],[temp['pressure'] for temp in data])
+            plt.plot([temp['month'] for temp in data],[temp['pressure'] for temp in data], marker='o')
                 
             fig.savefig('graph.png')
 
