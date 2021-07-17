@@ -56,6 +56,8 @@ def getQuery3(request):
     context = {}
     if data:
         context['data'] = data
+        context['wsid'] = station
+        context['year'] = year
         return render(request, 'query3.html', context)
     else:
         return render(request, 'error.html', context)
